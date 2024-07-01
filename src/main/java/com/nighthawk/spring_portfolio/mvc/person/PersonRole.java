@@ -21,4 +21,12 @@ public class PersonRole {
     public PersonRole (String name) {
         this.name = name;
     }
+
+    public static PersonRole[] init() { 
+        PersonRole user = new PersonRole("ROLE_STUDENT");
+        PersonRole tutor = new PersonRole("ROLE_TUTOR");
+        PersonRole admin = new PersonRole("ROLE_ADMIN");
+        PersonRole[] initArray = {user, tutor, admin};
+        return initArray;
+    }
 }

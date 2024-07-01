@@ -14,6 +14,8 @@ import com.nighthawk.spring_portfolio.mvc.person.Person;
 import com.nighthawk.spring_portfolio.mvc.person.PersonDetailsService;
 import com.nighthawk.spring_portfolio.mvc.person.PersonRole;
 import com.nighthawk.spring_portfolio.mvc.person.PersonRoleJpaRepository;
+import com.nighthawk.spring_portfolio.mvc.tutor.Tutor;
+import com.nighthawk.spring_portfolio.mvc.tutor.TutorJPARepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -27,6 +29,7 @@ public class ModelInit {
     @Autowired NoteJpaRepository noteRepo;
     @Autowired PersonRoleJpaRepository roleJpaRepository;
     @Autowired PersonDetailsService personDetailsService;
+    @Autowired TutorJPARepository tutorRepo;
 
     @Bean
     @Transactional
@@ -71,6 +74,11 @@ public class ModelInit {
                     Note n = new Note(text, person);  // constructor uses new person as Many-to-One association
                     noteRepo.save(n);  // JPA Save                  
                 }
+            }
+
+            Tutor[] tutorArray = Tutor.tutorInit();
+            for (Tutor tutor : tutorArray) {
+                tutorRepo.save(tutor); // JPA save
             }
 
         };
