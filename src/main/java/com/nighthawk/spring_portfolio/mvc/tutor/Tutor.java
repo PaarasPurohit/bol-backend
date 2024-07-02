@@ -2,7 +2,6 @@ package com.nighthawk.spring_portfolio.mvc.tutor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +13,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "internship")
+@Table(name = "tutor")
 @NoArgsConstructor
 public class Tutor {
 
@@ -46,24 +45,24 @@ public class Tutor {
     }
 
     public static Tutor[] tutorInit() {
-        Tutor t1 = new Tutor("Paaras Purohit", "email", "password", 
+        Tutor t1 = new Tutor("Paaras Purohit", "pmpurohit2017@outlook.com", "123456", 
             new ArrayList<>(Arrays.asList("Math", "English", "Science", "History")), 
-            new ArrayList<>(Arrays.asList(5)));
+            new ArrayList<>(Arrays.asList(5, 4, 4, 3, 5)));
         Tutor t2 = new Tutor("Emaad Mir", "email", "password", 
             new ArrayList<>(Arrays.asList("Math", "English", "Science", "History")), 
-            new ArrayList<>(Arrays.asList(5)));
+            new ArrayList<>(Arrays.asList(5, 5, 5, 4, 5)));
         Tutor t3 = new Tutor("Rishi Bansal", "email", "password", 
             new ArrayList<>(Arrays.asList("Math", "English", "Science", "History")), 
-            new ArrayList<>(Arrays.asList(5)));
+            new ArrayList<>(Arrays.asList(5, 1, 2, 1, 5)));
         Tutor t4 = new Tutor("Swarith Vaddi", "email", "password", 
             new ArrayList<>(Arrays.asList("Math", "English", "Science", "History")), 
-            new ArrayList<>(Arrays.asList(5)));
+            new ArrayList<>(Arrays.asList(5, 3, 2, 3, 2, 5)));
         Tutor t5 = new Tutor("Dinesh Sahai", "email", "password", 
             new ArrayList<>(Arrays.asList("Math", "English", "Science", "History")), 
-            new ArrayList<>(Arrays.asList(5)));
-        Tutor t6 = new Tutor("Ankit Pullivendula", "email", "password", 
+            new ArrayList<>(Arrays.asList(5, 5, 5, 5, 5, 1)));
+        Tutor t6 = new Tutor("Ankit Pulivendula", "email", "password", 
             new ArrayList<>(Arrays.asList("Math", "English", "Science", "History")), 
-            new ArrayList<>(Arrays.asList(5)));
+            new ArrayList<>(Arrays.asList(5, 1, 2, 4)));
 
         return new Tutor[] {t1, t2, t3, t4, t5, t6};
     }

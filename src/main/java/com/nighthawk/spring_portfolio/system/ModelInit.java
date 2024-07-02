@@ -75,7 +75,7 @@ public class ModelInit {
                     noteRepo.save(n);  // JPA Save                  
                 }
             }
-
+            
             Tutor[] tutorArray = Tutor.tutorInit();
             for (Tutor tutor : tutorArray) {
                 tutorRepo.save(tutor); // JPA save

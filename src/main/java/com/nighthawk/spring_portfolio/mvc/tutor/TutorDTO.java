@@ -86,6 +86,7 @@ public class TutorDTO {
         this.id = tutor.getId();
         this.username = tutor.getUsername();
         this.email = tutor.getEmail();
+        this.password = tutor.getPassword();
         this.subjects = tutor.getSubjects();
         this.ratings = tutor.getRatings();
         this.averageRating = tutor.getAverageRating();
